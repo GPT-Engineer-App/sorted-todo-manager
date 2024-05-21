@@ -46,7 +46,9 @@ const Index = () => {
             <option value="medium">Medium</option>
             <option value="high">High</option>
           </Select>
-          <Button onClick={handleAddTodo}>Add</Button>
+          <Button colorScheme="pink" onClick={handleAddTodo}>
+            Add
+          </Button>
         </HStack>
         {todos.map((todo) => (
           <HStack key={todo.id} width="100%" justifyContent="space-between">
@@ -54,12 +56,12 @@ const Index = () => {
               {todo.text} ({todo.priority})
             </Text>
             <HStack>
-              <IconButton aria-label="Edit" icon={<FaEdit />} onClick={() => handleEditTodo(todo.id)} />
-              <IconButton aria-label="Delete" icon={<FaTrash />} onClick={() => handleDeleteTodo(todo.id)} />
+              <IconButton colorScheme="pink" aria-label="Edit" icon={<FaEdit />} onClick={() => handleEditTodo(todo.id)} />
+              <IconButton colorScheme="pink" aria-label="Delete" icon={<FaTrash />} onClick={() => handleDeleteTodo(todo.id)} />
             </HStack>
           </HStack>
         ))}
-        <Button onClick={onOpen} leftIcon={<FaEye />}>
+        <Button colorScheme="pink" onClick={onOpen} leftIcon={<FaEye />}>
           View JSON
         </Button>
       </VStack>
@@ -86,11 +88,11 @@ const Index = () => {
           </ModalBody>
           <ModalFooter>
             {editTodo ? (
-              <Button colorScheme="blue" mr={3} onClick={handleSaveEdit}>
+              <Button colorScheme="pink" mr={3} onClick={handleSaveEdit}>
                 Save
               </Button>
             ) : (
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
+              <Button colorScheme="pink" mr={3} onClick={onClose}>
                 Close
               </Button>
             )}

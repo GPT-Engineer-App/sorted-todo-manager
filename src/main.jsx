@@ -11,12 +11,28 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  colors: {
+    ...colors,
+    pink: {
+      50: "#ffe4e6",
+      100: "#ffccd5",
+      200: "#ff99aa",
+      300: "#ff6680",
+      400: "#ff3366",
+      500: "#ff004d",
+      600: "#cc003e",
+      700: "#99002e",
+      800: "#66001f",
+      900: "#33000f",
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
       <App />
     </ChakraProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
